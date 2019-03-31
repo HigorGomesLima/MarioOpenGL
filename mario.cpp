@@ -92,14 +92,6 @@ glVertex3f( 0.5, 0.2, 0.5 );
 
 glEnd();
 
-// Lado amarelo - ESQUERDA
-glBegin(GL_LINE_LOOP);
-glColor3f( 0.0, 0.0, 1.0 );
-glVertex3f( -0.5, -0.5, -0.5 );
-glVertex3f( 0.5, -0.5, -0.5 );
-glVertex3f(0.0, 0.5, 0.0);
-glEnd();
-
 // Boné
 glBegin(GL_LINE_LOOP);
 glColor3f( 0.0, 0.0, 1.0 );
@@ -124,71 +116,380 @@ void marioCorpo(void)
 // Lado frente rosto
 glBegin(GL_LINE_LOOP);
 glColor3f( 0.0, 0.0, 1.0 );
-glVertex3f( 0.2, -0.4, -0.2 );
-glVertex3f( 0.2, 0.2, -0.2 );
-glVertex3f( 0.2, 0.2, 0.2 );
-glVertex3f( 0.2, -0.4, 0.2 );
+glVertex3f( 0.3, -0.6, -0.3 );
+glVertex3f( 0.3, 0.2, -0.3 );
+glVertex3f( 0.3, 0.2, 0.3 );
+glVertex3f( 0.3, -0.6, 0.3 );
 
 glEnd();
 
 // Lado rosto direita
 glBegin(GL_LINE_LOOP);
 glColor3f( 0.0, 0.0, 1.0 );
-glVertex3f( -0.2, -0.4, 0.2 );
-glVertex3f( -0.2, 0.2, 0.2 );
-glVertex3f( 0.2, 0.2, 0.2 );
-glVertex3f( 0.2, -0.4, 0.2 );
+glVertex3f( -0.3, -0.6, 0.3 );
+glVertex3f( -0.3, 0.2, 0.3 );
+glVertex3f( 0.3, 0.2, 0.3 );
+glVertex3f( 0.3, -0.6, 0.3 );
 
 glEnd();
 
 // Lado rosto esquerda
 glBegin(GL_LINE_LOOP);
 glColor3f( 0.0, 0.0, 1.0 );
-glVertex3f( 0.2, -0.4, -0.2 );
-glVertex3f( 0.2, 0.2, -0.2 );
-glVertex3f( -0.2, 0.2, -0.2 );
-glVertex3f( -0.2, -0.4, -0.2 );
+glVertex3f( 0.3, -0.6, -0.3 );
+glVertex3f( 0.3, 0.2, -0.3 );
+glVertex3f( -0.3, 0.2, -0.3 );
+glVertex3f( -0.3, -0.6, -0.3 );
 
 glEnd();
 
 // Lado rosto trás
 glBegin(GL_LINE_LOOP);
 glColor3f( 0.0, 0.0, 1.0 );
-glVertex3f( -0.2, -0.4, 0.2 );
-glVertex3f( -0.2, 0.2, 0.2 );
-glVertex3f( -0.2, 0.2, -0.2 );
-glVertex3f( -0.2, -0.4, -0.2 );
+glVertex3f( -0.3, -0.6, 0.3 );
+glVertex3f( -0.3, 0.2, 0.3 );
+glVertex3f( -0.3, 0.2, -0.3 );
+glVertex3f( -0.3, -0.6, -0.3 );
 
 glEnd();
 
 // Lado rosto topo
 glBegin(GL_LINE_LOOP);
 glColor3f( 0.0, 0.0, 1.0 );
-glVertex3f( -0.2, 0.2, 0.2 );
-glVertex3f( -0.2, 0.2, -0.2 );
-glVertex3f( 0.2, 0.2, -0.2 );
-glVertex3f( 0.2, 0.2, 0.2 );
+glVertex3f( -0.3, 0.2, 0.3 );
+glVertex3f( -0.3, 0.2, -0.3 );
+glVertex3f( 0.3, 0.2, -0.3 );
+glVertex3f( 0.3, 0.2, 0.3 );
 
 glEnd();
 
 // Lado rosto topo
 glBegin(GL_LINE_LOOP);
 glColor3f( 0.0, 0.0, 1.0 );
-glVertex3f( -0.2, -0.4, 0.2 );
-glVertex3f( -0.2, -0.4, -0.2 );
-glVertex3f( 0.2, -0.4, -0.2 );
-glVertex3f( 0.2, -0.4, 0.2 );
+glVertex3f( -0.3, -0.6, 0.3 );
+glVertex3f( -0.3, -0.6, -0.3 );
+glVertex3f( 0.3, -0.6, -0.3 );
+glVertex3f( 0.3, -0.6, 0.3 );
 
 glEnd();
 
-// Lado amarelo - ESQUERDA
+}
+
+void braco_direito(void){
+
+    // Reinicia transformações
+    glLoadIdentity();
+    // Rotaciona quando o usuário muda x e y
+    glRotatef( x, 1.0, 0.0, 0.0 );
+    glRotatef( y, 0.0, 1.0, 0.0 );
+    glBegin(GL_POLYGON);
+
+
+// Lado frente rosto
 glBegin(GL_LINE_LOOP);
 glColor3f( 0.0, 0.0, 1.0 );
-glVertex3f( -0.2, -0.2, -0.2 );
-glVertex3f( 0.2, -0.2, -0.2 );
-glVertex3f(0.0, 0.2, 0.0);
+glVertex3f( 0.7, -0.2, -0.7 );
+glVertex3f( 0.7, 0.2, -0.7 );
+glVertex3f( 0.7, 0.2, -0.3 );
+glVertex3f( 0.7, -0.2, -0.3 );
+
 glEnd();
 
+// Lado rosto direita
+glBegin(GL_LINE_LOOP);
+glColor3f( 0.0, 0.0, 1.0 );
+glVertex3f( -0.3, -0.2, -0.3 );
+glVertex3f( -0.3, 0.2, -0.3 );
+glVertex3f( 0.7, 0.2, -0.3 );
+glVertex3f( 0.7, -0.2, -0.3 );
+
+glEnd();
+
+// Lado rosto esquerda
+glBegin(GL_LINE_LOOP);
+glColor3f( 0.0, 0.0, 1.0 );
+glVertex3f( 0.7, -0.2, -0.7 );
+glVertex3f( 0.7, 0.2, -0.7 );
+glVertex3f( -0.3, 0.2, -0.7 );
+glVertex3f( -0.3, -0.2, -0.7 );
+
+glEnd();
+
+// Lado rosto trás
+glBegin(GL_LINE_LOOP);
+glColor3f( 0.0, 0.0, 1.0 );
+glVertex3f( -0.3, -0.2, -0.3 );
+glVertex3f( -0.3, 0.2, -0.3 );
+glVertex3f( -0.3, 0.2, -0.7 );
+glVertex3f( -0.3, -0.2, -0.7 );
+
+glEnd();
+
+// Lado rosto topo
+glBegin(GL_LINE_LOOP);
+glColor3f( 0.0, 0.0, 1.0 );
+glVertex3f( -0.3, 0.2, -0.3 );
+glVertex3f( -0.3, 0.2, -0.7 );
+glVertex3f( 0.7, 0.2, -0.7 );
+glVertex3f( 0.7, 0.2, -0.3 );
+
+glEnd();
+
+// Lado rosto topo
+glBegin(GL_LINE_LOOP);
+glColor3f( 0.0, 0.0, 1.0 );
+glVertex3f( -0.3, -0.2, -0.3 );
+glVertex3f( -0.3, -0.2, -0.7 );
+glVertex3f( 0.7, -0.2, -0.7 );
+glVertex3f( 0.7, -0.2, -0.3 );
+
+glEnd();
+}
+
+void braco_esquedo(void){
+
+    // Reinicia transformações
+    glLoadIdentity();
+    // Rotaciona quando o usuário muda x e y
+    glRotatef( x, 1.0, 0.0, 0.0 );
+    glRotatef( y, 0.0, 1.0, 0.0 );
+    glBegin(GL_POLYGON);
+
+
+// Lado frente rosto
+glBegin(GL_LINE_LOOP);
+glColor3f( 0.0, 0.0, 1.0 );
+glVertex3f( 0.7, -0.2, 0.7 );
+glVertex3f( 0.7, 0.2, 0.7 );
+glVertex3f( 0.7, 0.2, 0.3 );
+glVertex3f( 0.7, -0.2, 0.3 );
+
+glEnd();
+
+// Lado rosto direita
+glBegin(GL_LINE_LOOP);
+glColor3f( 0.0, 0.0, 1.0 );
+glVertex3f( -0.3, -0.2, 0.3 );
+glVertex3f( -0.3, 0.2, 0.3 );
+glVertex3f( 0.7, 0.2, 0.3 );
+glVertex3f( 0.7, -0.2, 0.3 );
+
+glEnd();
+
+// Lado rosto esquerda
+glBegin(GL_LINE_LOOP);
+glColor3f( 0.0, 0.0, 1.0 );
+glVertex3f( 0.7, -0.2, 0.7 );
+glVertex3f( 0.7, 0.2, 0.7 );
+glVertex3f( -0.3, 0.2, 0.7 );
+glVertex3f( -0.3, -0.2, 0.7 );
+
+glEnd();
+
+// Lado rosto trás
+glBegin(GL_LINE_LOOP);
+glColor3f( 0.0, 0.0, 1.0 );
+glVertex3f( -0.3, -0.2, 0.3 );
+glVertex3f( -0.3, 0.2, 0.3 );
+glVertex3f( -0.3, 0.2, 0.7 );
+glVertex3f( -0.3, -0.2, 0.7 );
+
+glEnd();
+
+// Lado rosto topo
+glBegin(GL_LINE_LOOP);
+glColor3f( 0.0, 0.0, 1.0 );
+glVertex3f( -0.3, 0.2, 0.3 );
+glVertex3f( -0.3, 0.2, 0.7 );
+glVertex3f( 0.7, 0.2, 0.7 );
+glVertex3f( 0.7, 0.2, 0.3 );
+
+glEnd();
+
+// Lado rosto topo
+glBegin(GL_LINE_LOOP);
+glColor3f( 0.0, 0.0, 1.0 );
+glVertex3f( -0.3, -0.2, -0.3 );
+glVertex3f( -0.3, -0.2, -0.7 );
+glVertex3f( 0.7, -0.2, -0.7 );
+glVertex3f( 0.7, -0.2, -0.3 );
+
+glEnd();
+}
+
+void pes(void)
+{
+    // Reinicia transformações
+    glLoadIdentity();
+    // Rotaciona quando o usuário muda x e y
+    glRotatef( x, 1.0, 0.0, 0.0 );
+    glRotatef( y, 0.0, 1.0, 0.0 );
+
+    glBegin(GL_POLYGON);
+
+
+// Lado frente rosto
+glBegin(GL_LINE_LOOP);
+glColor3f( 0.0, 0.0, 1.0 );
+glVertex3f( 0.4, -0.9, -0.3 );
+glVertex3f( 0.4, -0.6, -0.3 );
+glVertex3f( 0.4, -0.6, 0.3 );
+glVertex3f( 0.4, -0.9, 0.3 );
+
+glEnd();
+
+// Lado rosto direita
+glBegin(GL_LINE_LOOP);
+glColor3f( 0.0, 0.0, 1.0 );
+glVertex3f( -0.3, -0.9, 0.3 );
+glVertex3f( -0.3, -0.6, 0.3 );
+glVertex3f( 0.4, -0.6, 0.3 );
+glVertex3f( 0.4, -0.9, 0.3 );
+
+glEnd();
+
+// Lado rosto esquerda
+glBegin(GL_LINE_LOOP);
+glColor3f( 0.0, 0.0, 1.0 );
+glVertex3f( 0.4, -0.9, -0.3 );
+glVertex3f( 0.4, -0.6, -0.3 );
+glVertex3f( -0.3, -0.6, -0.3 );
+glVertex3f( -0.3, -0.9, -0.3 );
+
+glEnd();
+
+// Lado rosto trás
+glBegin(GL_LINE_LOOP);
+glColor3f( 0.0, 0.0, 1.0 );
+glVertex3f( -0.3, -0.9, 0.3 );
+glVertex3f( -0.3, -0.6, 0.3 );
+glVertex3f( -0.3, -0.6, -0.3 );
+glVertex3f( -0.3, -0.9, -0.3 );
+
+glEnd();
+
+// Lado rosto topo
+glBegin(GL_LINE_LOOP);
+glColor3f( 0.0, 0.0, 1.0 );
+glVertex3f( -0.3, -0.6, 0.3 );
+glVertex3f( -0.3, -0.6, -0.3 );
+glVertex3f( 0.4, -0.6, -0.3 );
+glVertex3f( 0.4, -0.6, 0.3 );
+
+glEnd();
+
+// Lado rosto topo
+glBegin(GL_LINE_LOOP);
+glColor3f( 0.0, 0.0, 1.0 );
+glVertex3f( -0.3, -0.9, 0.3 );
+glVertex3f( -0.3, -0.9, -0.3 );
+glVertex3f( 0.4, -0.9, -0.3 );
+glVertex3f( 0.4, -0.9, 0.3 );
+
+glEnd();
+
+}
+
+void base(void){
+    // Reinicia transformações
+    glLoadIdentity();
+    // Rotaciona quando o usuário muda x e y
+    glRotatef( x, 1.0, 0.0, 0.0 );
+    glRotatef( y, 0.0, 1.0, 0.0 );
+
+    glBegin(GL_POLYGON);
+
+
+    // base
+    glBegin(GL_LINE_LOOP);
+        glColor3f( 0.0, 0.0, 1.0 );
+        glVertex3f( 0.7, -1.1, -0.2 );
+        glVertex3f( 0.3, -1.1, -0.6 );
+        glVertex3f( -0.3, -1.1, -0.6 );
+        glVertex3f( -0.7, -1.1, -0.2 );
+        glVertex3f( -0.7, -1.1, 0.2 );
+        glVertex3f( -0.3, -1.1, 0.6 );
+        glVertex3f( 0.3, -1.1, 0.6 );
+        glVertex3f( 0.7, -1.1, 0.2 );
+    glEnd();
+
+
+    // topo
+    glBegin(GL_LINE_LOOP);
+        glColor3f( 0.0, 0.0, 1.0 );
+        glVertex3f( 0.7, -0.9, -0.2 );
+        glVertex3f( 0.3, -0.9, -0.6 );
+        glVertex3f( -0.3, -0.9, -0.6 );
+        glVertex3f( -0.7, -0.9, -0.2 );
+        glVertex3f( -0.7, -0.9, 0.2 );
+        glVertex3f( -0.3, -0.9, 0.6 );
+        glVertex3f( 0.3, -0.9, 0.6 );
+        glVertex3f( 0.7, -0.9, 0.2 );
+    glEnd();
+
+    glBegin(GL_LINE_LOOP);
+        glColor3f( 0.0, 0.0, 1.0 );
+        glVertex3f( 0.7, -1.1, -0.2 );
+        glVertex3f( 0.3, -1.1, -0.6 );
+        glVertex3f( 0.3, -0.9, -0.6 );
+        glVertex3f( 0.7, -0.9, -0.2 );
+    glEnd();
+
+    glBegin(GL_LINE_LOOP);
+        glColor3f( 0.0, 0.0, 1.0 );
+        glVertex3f( 0.3, -1.1, -0.6 );
+        glVertex3f( -0.3, -1.1, -0.6 );
+        glVertex3f( -0.3, -0.9, -0.6 );
+        glVertex3f( 0.3, -0.9, -0.6 );
+    glEnd();
+
+    glBegin(GL_LINE_LOOP);
+        glColor3f( 0.0, 0.0, 1.0 );
+        glVertex3f( -0.3, -1.1, -0.6 );
+        glVertex3f( -0.7, -1.1, -0.2 );
+        glVertex3f( -0.7, -0.9, -0.2 );
+        glVertex3f( -0.3, -0.9, -0.6 );
+    glEnd();
+
+    glBegin(GL_LINE_LOOP);
+        glColor3f( 0.0, 0.0, 1.0 );
+        glVertex3f( -0.7, -1.1, -0.2 );
+        glVertex3f( -0.7, -1.1, 0.2 );
+        glVertex3f( -0.7, -0.9, 0.2 );
+        glVertex3f( -0.7, -0.9, -0.2 );
+    glEnd();
+
+    glBegin(GL_LINE_LOOP);
+        glColor3f( 0.0, 0.0, 1.0 );
+        glVertex3f( -0.7, -1.1, 0.2 );
+        glVertex3f( -0.3, -1.1, 0.6 );
+        glVertex3f( -0.3, -0.9, 0.6 );
+        glVertex3f( -0.7, -0.9, 0.2 );
+    glEnd();
+
+    glBegin(GL_LINE_LOOP);
+        glColor3f( 0.0, 0.0, 1.0 );
+        glVertex3f( -0.3, -1.1, 0.6 );
+        glVertex3f( 0.3, -1.1, 0.6 );
+        glVertex3f( 0.3, -0.9, 0.6 );
+        glVertex3f( -0.3, -0.9, 0.6 );
+    glEnd();
+
+    glBegin(GL_LINE_LOOP);
+        glColor3f( 0.0, 0.0, 1.0 );
+        glVertex3f( 0.3, -1.1, 0.6 );
+        glVertex3f( 0.7, -1.1, 0.2 );
+        glVertex3f( 0.7, -0.9, 0.2 );
+        glVertex3f( 0.3, -0.9, 0.6 );
+    glEnd();
+
+    glBegin(GL_LINE_LOOP);
+        glColor3f( 0.0, 0.0, 1.0 );
+        glVertex3f( 0.7, -1.1, 0.2 );
+        glVertex3f( 0.7, -1.1, -0.2 );
+        glVertex3f( 0.7, -0.9, -0.2 );
+        glVertex3f( 0.7, -0.9, 0.2 );
+    glEnd();
 }
 
 static void display(void)
@@ -197,6 +498,10 @@ static void display(void)
     marioRosto(); //função entrada do polígono
     marioCorpo();
     glFlush();
+    braco_direito();
+    braco_esquedo();
+    pes();
+    base();
     glutSwapBuffers();
 }
 
@@ -207,9 +512,9 @@ int main(int argc, char *argv[])
     glutInitWindowSize(600,480);
     glutInitWindowPosition(10,10);
     glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH);
-    glutCreateWindow("Piramide");
-    glEnable(GL_DEPTH_TEST);
+    glutCreateWindow("Mario");
     glutDisplayFunc(display);
+    glEnable(GL_DEPTH_TEST);
     glutSpecialFunc(specialKeys);
     glClearColor(1,1,1,1);
     glutMainLoop();
